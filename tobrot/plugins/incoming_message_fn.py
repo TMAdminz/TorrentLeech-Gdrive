@@ -46,8 +46,8 @@ async def incoming_purge_message_f(client, message):
 async def incoming_message_f(client, message):
     """/leech command"""
     g_id = message.from_user.id
-    credit = await message.reply_text(f"🧲 Leeching for you <a href='tg://user?id={g_id}'>🤕</a>", parse_mode="html")
-    i_m_sefg = await credit.reply_text("processing", quote=True)
+    credit = await message.reply_text(f"🧲 AiTorrentWare Leeching for <a href='tg://user?id={g_id}'> you </a>", parse_mode="html")
+    i_m_sefg = await message.reply_text("processing", quote=True)
     is_zip = False
     is_unzip = False
     is_unrar = False
@@ -106,8 +106,8 @@ async def incoming_message_f(client, message):
 async def incoming_gdrive_message_f(client, message):
     """/gleech command"""
     g_id = message.from_user.id
-    credit = await message.reply_text(f"🧲 Leeching for you <a href='tg://user?id={g_id}'>🤕</a>", parse_mode="html")
-    i_m_sefg = await credit.reply_text("processing", quote=True)
+    credit = await message.reply_text(f"🧲 AiTorrentWare Leeching for <a href='tg://user?id={g_id}'> you </a>", parse_mode="html")
+    i_m_sefg = await message.reply_text("processing", quote=True)
     is_zip = False
     is_unzip = False
     is_unrar = False
@@ -164,8 +164,8 @@ async def incoming_gdrive_message_f(client, message):
 async def incoming_youtube_dl_f(client, message):
     """ /ytdl command """
     g_id = message.from_user.id
-    credit = await message.reply_text(f"💀 Downloading for you <a href='tg://user?id={g_id}'>🤕</a>", parse_mode="html")
-    i_m_sefg = await credit.reply_text("processing", quote=True)
+    credit = await message.reply_text(f"💀 AiTorrentWare Downloading for <a href='tg://user?id={g_id}'> you </a>", parse_mode="html")
+    i_m_sefg = await message.reply_text("processing", quote=True)
     # LOGGER.info(message)
     # extract link from message
     dl_url, cf_name, yt_dl_user_name, yt_dl_pass_word = await extract_link(
@@ -219,6 +219,8 @@ async def incoming_youtube_dl_f(client, message):
 #playlist
 async def g_yt_playlist(client, message):
     """ /pytdl command """
+    g_id = message.from_user.id
+    #credit = await message.reply_text(f"💀 Downloading for <a href='tg://user?id={g_id}'> you </a>", parse_mode="html")
     #i_m_sefg = await message.reply_text("Processing...you should wait🤗", quote=True)
     usr_id = message.from_user.id
     G_DRIVE = False
@@ -226,7 +228,7 @@ async def g_yt_playlist(client, message):
         if message.command[1] == "gdrive":
             G_DRIVE = True
     if 'youtube.com/playlist' in message.reply_to_message.text:
-        i_m_sefg = await message.reply_text("Downloading...you should wait🤗", quote=True)
+        i_m_sefg = await message.reply_text("💀 AiTorrentWare Downloading for <a href='tg://user?id={g_id}'> you </a>", parse_mode="html")
         await yt_playlist_downg(message.reply_to_message, i_m_sefg, G_DRIVE)
     
     else:
@@ -246,4 +248,4 @@ async def g_clonee(client, message):
         await gclone.gcl()
         await gclone.link_gen_size()
     else:
-        await message.reply_text("You should reply to a message, which format should be [ID of Gdrive file/folder Name of the file/folder]\nOr read Github for detailled information")
+        await message.reply_text("You should reply to a message, which format should be [ID of Gdrive file/folder Name of the file/folder]\n\nOr check the sample, how to use this\n<a href='https://t.me/c/1278496201/18019'>cick here</a>")
