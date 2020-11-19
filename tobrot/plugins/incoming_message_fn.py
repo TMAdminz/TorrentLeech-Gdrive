@@ -248,4 +248,4 @@ async def g_clonee(client, message):
         await gclone.gcl()
         await gclone.link_gen_size()
     else:
-        await message.reply_text("You should reply to a message, which format should be [ID of Gdrive file/folder Name of the file/folder]\n\nOr check the sample, how to use this\n<a href='https://t.me/c/1278496201/18019'>cick here</a>")
+        await message.reply_text("You should reply to a message, which format should be [ID of Gdrive file/folder Name of the file/folder]\n\nOr check the sample, how to use this\n<a href='https://t.me/c/1491078689/610'>cick here</a>")
