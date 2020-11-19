@@ -38,7 +38,7 @@ async def help_message_f(client, message):
     #message_id = 99
     # display the /help
     
-    await message.reply_text("""Hello.... <a href='tg://user?id={update.from_user.id}'> {g} </a> For help \nOr read the <a href='https://t.me/c/1278496201/17766'>pinned message</a> \n Ask\n<a href="https://telegram.dog/Plethro_Admin">1. Plethro_Admin</a>\n<a href="https://telegram.dog/MonkAno">2. MonkAno</a>""", disable_web_page_preview=True)
+    await message.reply_text("""Hello.... <a href='tg://user?id={update.from_user.id}'> {g} </a> For help \nOr read the <a href='https://t.me/c/1491078689/600'>pinned message</a> \n Ask\n<a href="https://telegram.dog/Plethro_Admin">1. Plethro_Admin</a>\n<a href="https://telegram.dog/MonkAno">2. MonkAno</a>""", disable_web_page_preview=True)
 
 
 async def rename_message_f(client, message):
